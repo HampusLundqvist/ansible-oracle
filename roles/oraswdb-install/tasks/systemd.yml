@@ -9,3 +9,10 @@
   systemd: name=oracle-rdbms daemon_reload=yes enabled=yes
   when: autostartup_service and hostinitdaemon == "systemd"
   tags: autostartup_service
+
+- name: install-home-db | start oracle rdbms
+  service:
+    name: oracle-rdbms
+    state: started
+  when: hostinitdaemon == "systemd"
+  tags: autostartup_service

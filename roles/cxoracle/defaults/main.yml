@@ -7,4 +7,4 @@ oracle_base: /u01/app/oracle
 #oracle_env:
 #      ORACLE_HOME: "{{ oracle_home }}"
 extra_args: "{% if use_proxy %}--proxy={{ http_proxy }}{% else %}{% endif %}"
-#cx_oracle_umask: 0022
+cx_oracle_umask: '022'

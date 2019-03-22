@@ -95,7 +95,7 @@
    - vgname: vgora
      state: present
      filesystem:
-       - {mntp: /u01, lvname: lvora, lvsize: 100%FREE, fstype: ext4}
+       - {mntp: /u01, lvname: lvora, lvsize: 100%FREE, fstype: xfs}
      disk:
        - {device: /dev/sdb, pvname: /dev/sdb1}
 
